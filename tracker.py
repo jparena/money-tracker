@@ -1,3 +1,4 @@
+4
 #!/usr/bin/env python3
 import csv
 from datetime import datetime
@@ -28,7 +29,7 @@ def add_income():
 	#open file and append the stuff
 	with open(LOG_FILE, 'a', newline ='') as file:
 		writer = csv.writer(file)
-		writer.writerow([income_type, amount, datetime.now().fromisoformat()])
+		writer.writerow([income_type, amount, datetime.now().strftime('%Y-%m-%d %H:%M:%S'])
 
 def display_total():
 	"""display totals"""
